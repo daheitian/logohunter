@@ -3,69 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logo Finder</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 30px;
-        }
-        input[type="text"] {
-            width: 80%;
-            max-width: 400px;
-            padding: 10px;
-            font-size: 16px;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-        img {
-            max-width: 300px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
-<script src="https://replit.com/public/js/repl-auth-v2.js"></script>
+    <title>Logo HUNTER</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Logo hunter</h1>
-    <input type="text" id="urlInput" placeholder="Enter company website URL...">
-    <button onclick="findLogo()">go</button>
-    <div id="logoContainer" style="display:none;">
-        <h2>Logo:</h2>
-        <img id="logoImage" src="" alt="Company Logo">
-        <br>
-        <button id="downloadLogo" onclick="downloadLogo()">Download Logo</button>
+    <div class="logo-container">
+        <img src="https://logo.clearbit.com/apple.com" alt="Apple Logo" class="apple-logo">
     </div>
-    <script>
-        function findLogo() {
-            const url = document.getElementById('urlInput').value;
-            if (!url) {
-                alert('Please enter a URL');
-                return;
-            }
-            const logoAPI = `https://logo.clearbit.com/${url}`;
-            document.getElementById('logoImage').src = logoAPI;
-            document.getElementById('logoContainer').style.display = 'block';
-        }
-
-        function downloadLogo() {
-            const logoURL = document.getElementById('logoImage').src;
-            const a = document.createElement('a');
-            a.href = logoURL;
-            a.download = 'logo.png';
-            a.click();
-        }
-    </script>
+    <h1>Logo HUNTER</h1>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search for a logo...">
+        <button class="search-button">Search</button>
+    </div>
 </body>
 </html>
