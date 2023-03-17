@@ -1,3 +1,5 @@
+好的，这是优化后的代码，更接近苹果的风格：
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,17 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logo Finder</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             background-color: #f2f2f2;
             text-align: center;
             padding: 50px;
         }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            height: 100px;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+        .logo-container img {
+            max-height: 100%;
+            max-width: 100%;
+        }
         h1 {
             font-size: 30px;
             font-weight: bold;
             margin: 0;
             padding: 0;
+            margin-bottom: 20px;
         }
         input[type="text"] {
             width: 80%;
@@ -70,8 +89,8 @@
     </style>
 </head>
 <body>
-    <div style="background-color: #f2f2f2; padding: 20px;">
-        <img src="https://logo.clearbit.com/apple.com" alt="Apple Logo" style="max-width: 100px;">
+    <div class="logo-container">
+        <img src="https://logo.clearbit.com/apple.com" alt="Apple Logo">
     </div>
     <h1>Logo Finder</h1>
     <input type="text" id="urlInput" placeholder="Enter company website URL...">
