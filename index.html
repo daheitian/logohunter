@@ -3,46 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<img src="https://logo.clearbit.com/apple.com" alt="Apple Logo" class="apple-logo">
-    </div>
-    <title>Logo HUNTER</title>
+    <title>Logo Finder</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             background-color: #f2f2f2;
             text-align: center;
             padding: 50px;
         }
         h1 {
             font-size: 30px;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
         }
         input[type="text"] {
             width: 80%;
             max-width: 400px;
             padding: 10px;
             font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
         }
         button {
-            background-color: #4CAF50;
+            background-color: #007aff;
             color: white;
             padding: 10px 20px;
             font-size: 16px;
             margin-top: 20px;
             cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         img {
             max-width: 300px;
             border: 1px solid #ccc;
             padding: 10px;
             margin-top: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        #logoContainer {
+            display: none;
+            margin-top: 50px;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+        #downloadLogo {
+            background-color: #007aff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
+    <div style="background-color: #f2f2f2; padding: 20px;">
+        <img src="https://logo.clearbit.com/apple.com" alt="Apple Logo" style="max-width: 100px;">
+    </div>
     <h1>Logo Finder</h1>
     <input type="text" id="urlInput" placeholder="Enter company website URL...">
     <button onclick="findLogo()">Find Logo</button>
-    <div id="logoContainer" style="display:none;">
+    <div id="logoContainer">
         <h2>Logo:</h2>
         <img id="logoImage" src="" alt="Company Logo">
         <br>
