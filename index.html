@@ -89,7 +89,7 @@
 </head>
 <body>
     <div class="logo-container">
-        <img src="https://logo.clearbit.com/apple.com”alt="Apple Logo">
+        <img src="https://logo.clearbit.com/apple.com" alt="Apple Logo">
     </div>
     <h1>LOGOHUNTER </h1>
     <input type="text" id="urlInput" placeholder="Enter company website URL...">
@@ -107,8 +107,7 @@
                 alert('Please enter a URL');
                 return;
             }
-            const logoAPI = `https://logo.clearbit.com/${url}`;
-            document.getElementById('logoImage').src = logoAPI;
+            document.getElementById('logoImage').src = "https://logo.clearbit.com/apple.com";
             document.getElementById('logoContainer').style.display = 'block';
         }
 
@@ -116,7 +115,7 @@
             const logoURL = document.getElementById('logoImage').src;
             const a = document.createElement('a');
             a.href = logoURL;
-            a.download = 'logo.png';
+            a.download = 'apple-logo.png';
             a.click();
         }
     </script>
