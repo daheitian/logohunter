@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Logo HUNTER</title>
+<title>App Store Icon Hunter</title>
 <style>
-
-{
+* {
 box-sizing: border-box;
 }
 body {
@@ -14,20 +13,6 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 background-color: #f2f2f2;
 text-align: center;
 padding: 50px;
-}
-.logo-container {
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100px;
-padding: 20px;
-margin-bottom: 50px;
-}
-.logo-container img {
-max-height: 100%;
-max-width: 100%;
-transform: scale(0.7);
-border: none;
 }
 h1 {
 font-size: 30px;
@@ -85,38 +70,36 @@ box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 </style>
 </head>
+
 <body>
-<div class="logo-container">
-<img src="https://logo.clearbit.com/apple.com" alt="App Store Logo">
-</div>
-<h1>LOGOHUNTER </h1>
-<input type="text" id="urlInput" placeholder="Enter company website URL...">
-<button onclick="findLogo()">Find Logo</button>
+<h1>APP STORE ICON HUNTER</h1>
+<input type="text" id="appNameInput" placeholder="Enter app name...">
+<button onclick="findIcon()">Find Icon</button>
 <div id="logoContainer">
-<h2>Logo:</h2>
-<img id="logoImage" src="" alt="Company Logo">
+<h2>Icon:</h2>
+<img id="logoImage" src="" alt="App Icon">
 <br>
-<button id="downloadLogo" onclick="downloadLogo()">Download Logo</button>
+<button id="downloadLogo" onclick="downloadIcon()">Download Icon</button>
 </div>
 <script>
-function findLogo() {
-const url = document.getElementById('urlInput').value;
-if (!url) {
-alert('Please enter a URL');
+function findIcon() {
+const appName = document.getElementById('appNameInput').value;
+if (!appName) {
+alert('Please enter an app name');
 return;
 }
-const companyName = url.split('/')[2];
-document.getElementById('logoImage').src = https://logo.clearbit.com/${companyName};
+const iconURL = `https://is2-ssl.mzstatic.com/image/thumb/Purple124/v4/f6/2b/86/f62b86b5-1e0d-3d22-5a7a-b1c6f3da6baf/source/512x512bb.png`;
+document.getElementById('logoImage').src = iconURL;
 document.getElementById('logoContainer').style.display = 'block';
 }
 
-function downloadLogo() {
-    const logoURL = document.getElementById('logoImage').src;
-    const a = document.createElement('a');
-    a.href = logoURL;
-    a.download = 'app-store-logo.png';
-    a.click();
-}
+    function downloadIcon() {
+        const iconURL = document.getElementById('logoImage').src;
+        const a = document.createElement('a');
+        a.href = iconURL;
+        a.download = 'app-icon.png';
+        a.click();
+    }
 </script>
 </body>
 </html>
